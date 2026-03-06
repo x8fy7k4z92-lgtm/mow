@@ -664,7 +664,7 @@
     /* Photo bleeds to left edge, text lives right */
     .firm-inner {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1.15fr 0.85fr;
       gap: 0;
       width: 100%;
       align-items: stretch;
@@ -694,8 +694,8 @@
       inset: 0;
       background: linear-gradient(
         to right,
-        transparent 72%,
-        rgba(19,32,53,0.7) 92%,
+        transparent 82%,
+        rgba(19,32,53,0.65) 95%,
         var(--navy) 100%
       );
       z-index: 1;
@@ -1898,6 +1898,21 @@
         max-width: 320px;
       }
     }
+
+    .client-type-cta {
+      display: inline-block;
+      margin-top: 16px;
+      font-family: var(--sans);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      transition: letter-spacing 0.2s;
+    }
+    .client-type:hover .client-type-cta {
+      letter-spacing: 0.22em;
+    }
   </style>
 </head>
 <body>
@@ -2206,25 +2221,29 @@
         </div>
         <div class="clients-right reveal reveal-delay-1">
           <div class="client-types">
-            <div class="client-type">
+            <div class="client-type" onclick="openDrawer('drawer-business')" style="cursor:pointer;">
               <div class="client-type-icon">✦</div>
               <div class="client-type-title">Business Owners</div>
               <p class="client-type-text">Approaching or navigating a liquidity event, with complex tax and estate planning needs tied to the business.</p>
+              <span class="client-type-cta">Learn More →</span>
             </div>
-            <div class="client-type">
+            <div class="client-type" onclick="openDrawer('drawer-executives')" style="cursor:pointer;">
               <div class="client-type-icon">✦</div>
               <div class="client-type-title">Senior Executives</div>
               <p class="client-type-text">Managing concentrated equity positions, deferred compensation, and the transition from income accumulation to wealth management.</p>
+              <span class="client-type-cta">Learn More →</span>
             </div>
-            <div class="client-type">
+            <div class="client-type" onclick="openDrawer('drawer-families')" style="cursor:pointer;">
               <div class="client-type-icon">✦</div>
               <div class="client-type-title">Families in Transition</div>
               <p class="client-type-text">Approaching retirement, navigating an inheritance, or restructuring after a major life change that requires a comprehensive plan.</p>
+              <span class="client-type-cta">Learn More →</span>
             </div>
-            <div class="client-type">
+            <div class="client-type" onclick="openDrawer('drawer-relocators')" style="cursor:pointer;">
               <div class="client-type-icon">✦</div>
               <div class="client-type-title">New Hampshire Relocators</div>
               <p class="client-type-text">Moving to New Hampshire from higher-tax states and seeking a trusted local advisor to coordinate their updated financial strategy.</p>
+              <span class="client-type-cta">Learn More →</span>
             </div>
           </div>
         </div>
@@ -2388,7 +2407,7 @@
           <p class="person-card-title">CFP® · Wealth Manager</p>
           <div class="person-card-rule"></div>
           <p class="person-card-excerpt">
-            Having served clients across Colony Group, Hightower, and other leading independent platforms, Mark brings institutional-grade rigor to a boutique practice.
+            A CFP® with experience across some of the most respected independent advisory firms in the country — including Focus Partners Wealth and Hightower — Mark brings institutional-grade rigor to a boutique practice.
           </p>
           <span class="person-card-cta">Full Profile</span>
         </div>
@@ -2409,6 +2428,189 @@
     </div>
   </section>
 
+
+  <!-- DRAWER: Business Owners -->
+  <div class="service-drawer" id="drawer-business">
+    <div class="drawer-inner">
+      <div class="drawer-close">
+        <button class="drawer-close-btn" onclick="closeDrawer()">Close ✕</button>
+      </div>
+      <p class="drawer-eyebrow">Who We Serve</p>
+      <h2 class="drawer-title">Business<br><em>Owners</em></h2>
+      <div class="drawer-rule"></div>
+      <p class="drawer-lead">
+        For business owners, the company is not just an asset — it is often the largest, most concentrated, and most emotionally significant piece of the financial picture. That requires a different kind of planning conversation.
+      </p>
+      <p class="drawer-body">
+        Whether you are years away from an exit or actively in the process, the decisions made now have lasting consequences: how the sale is structured, how proceeds are invested, how much goes to taxes versus your family. Most owners spend years building the business and relatively little time planning for what comes after. We help close that gap.
+      </p>
+      <p class="drawer-body">
+        Our work with business owners typically spans three distinct phases. Pre-exit: identifying the right structure, coordinating with M&A advisors and attorneys, modeling after-tax outcomes, and making sure your personal financial plan can absorb the transition. At exit: managing the liquidity event itself, coordinating the tax strategy, and establishing the investment framework for the proceeds. Post-exit: rebuilding a portfolio that reflects your new financial reality — without the concentrated risk of the business, but with a structure that preserves what you built.
+      </p>
+      <div class="drawer-section">
+        <p class="drawer-section-title">Planning areas we address</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Pre-exit financial modeling — what does life look like after the transaction?</li>
+          <li>· Business valuation coordination and sale structure analysis (asset vs. stock sale implications)</li>
+          <li>· Installment sales, earnouts, and rolling equity — managing multi-year tax exposure</li>
+          <li>· Qualified Opportunity Zone investing for capital gains deferral</li>
+          <li>· Charitable strategies: Donor-Advised Funds, CRTs, and QCDs to offset taxable events</li>
+          <li>· Estate planning around business interests — gifting strategies before the sale</li>
+          <li>· Key man insurance, buy-sell agreements, and succession structure review</li>
+          <li>· Post-liquidity portfolio construction and income strategy</li>
+        </ul>
+      </div>
+      <div class="drawer-callout">
+        <p class="drawer-callout-title">Well-suited for business owners who...</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Have a business valued at $3M or above and are considering a sale or transition in the next 1–7 years</li>
+          <li>· Have most of their net worth tied up in the business and limited liquid assets relative to total wealth</li>
+          <li>· Want a financial advisor who can work alongside their M&A advisor, CPA, and attorney — not operate in isolation</li>
+          <li>· Are thinking about what the next chapter looks like, not just how to close the deal</li>
+        </ul>
+      </div>
+      <a href="https://calendly.com/monadnock-capital-group/fit" target="_blank" rel="noopener" class="drawer-cta" onclick="closeDrawer()">Schedule a Conversation</a>
+    </div>
+  </div>
+
+  <!-- DRAWER: Senior Executives -->
+  <div class="service-drawer" id="drawer-executives">
+    <div class="drawer-inner">
+      <div class="drawer-close">
+        <button class="drawer-close-btn" onclick="closeDrawer()">Close ✕</button>
+      </div>
+      <p class="drawer-eyebrow">Who We Serve</p>
+      <h2 class="drawer-title">Senior<br><em>Executives</em></h2>
+      <div class="drawer-rule"></div>
+      <p class="drawer-lead">
+        Senior executives face a wealth management challenge that is fundamentally different from what most advisors are built to handle: income and assets that arrive in multiple forms, on irregular schedules, with significant tax consequences attached to each decision.
+      </p>
+      <p class="drawer-body">
+        Base salary is the straightforward part. The complexity lies in everything else — RSUs vesting across multiple tranches, NQSOs and ISOs with overlapping exercise windows, deferred compensation plans with payout elections that have already been locked in, and concentrated positions in employer stock that represent both the foundation of your wealth and its biggest single risk. Each of these requires a coordinated strategy. Handled in isolation, they add up to unnecessary tax liability and poorly diversified exposure.
+      </p>
+      <p class="drawer-body">
+        The transition from executive income to investment income — retirement or a career change — is where the planning stakes are highest. The decisions made in the 24–36 months on either side of that transition typically have more impact on long-term financial outcomes than any other period. We work with executives to build a plan that accounts for what is coming, not just what is here today.
+      </p>
+      <div class="drawer-section">
+        <p class="drawer-section-title">Planning areas we address</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Equity compensation strategy — RSU vesting schedules, ISO/NQSO exercise planning, and AMT exposure</li>
+          <li>· Concentrated stock position management: staged diversification, exchange funds, and covered call strategies</li>
+          <li>· Deferred compensation plan coordination — payout election review and distribution timing</li>
+          <li>· 10b5-1 plan strategy for orderly stock sales within trading windows</li>
+          <li>· Retirement transition modeling — income replacement, Social Security optimization, Medicare planning</li>
+          <li>· Executive benefit review: SERP, COLI, supplemental life, and non-qualified plans</li>
+          <li>· Asset location across taxable, tax-deferred, and Roth accounts</li>
+          <li>· Estate planning for accumulated wealth: trusts, gifting strategies, beneficiary coordination</li>
+        </ul>
+      </div>
+      <div class="drawer-callout">
+        <p class="drawer-callout-title">Well-suited for executives who...</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Receive a meaningful portion of compensation in equity — and lack a clear strategy for managing it</li>
+          <li>· Have significant exposure to a single employer's stock and want to reduce that risk systematically</li>
+          <li>· Are within 5 years of a major career transition and have not stress-tested their plan</li>
+          <li>· Work with a corporate CPA who handles tax compliance but want a financial advisor focused on strategy</li>
+        </ul>
+      </div>
+      <a href="https://calendly.com/monadnock-capital-group/fit" target="_blank" rel="noopener" class="drawer-cta" onclick="closeDrawer()">Schedule a Conversation</a>
+    </div>
+  </div>
+
+  <!-- DRAWER: Families in Transition -->
+  <div class="service-drawer" id="drawer-families">
+    <div class="drawer-inner">
+      <div class="drawer-close">
+        <button class="drawer-close-btn" onclick="closeDrawer()">Close ✕</button>
+      </div>
+      <p class="drawer-eyebrow">Who We Serve</p>
+      <h2 class="drawer-title">Families in<br><em>Transition</em></h2>
+      <div class="drawer-rule"></div>
+      <p class="drawer-lead">
+        Some of the most consequential financial decisions happen not during periods of stability, but during transition — retirement, inheritance, divorce, the death of a spouse, or a significant change in household income. These moments require clear thinking precisely when clarity is hardest to find.
+      </p>
+      <p class="drawer-body">
+        Approaching retirement is the most common inflection point we see. The accumulation phase — saving, investing, deferring — is governed by a relatively simple framework. The distribution phase is far more complex: sequencing withdrawals across account types, managing taxes on Social Security and RMDs, deciding when to take pension elections, and structuring a sustainable income stream that does not outlive the people it supports. Getting this right in the first few years of retirement matters more than most people expect.
+      </p>
+      <p class="drawer-body">
+        Inheritance and estate settlement present their own set of challenges. Suddenly inheriting significant assets — particularly if they arrive as a mix of IRAs, taxable accounts, real estate, and business interests — requires immediate decisions with long-term implications. We help families navigate these moments without rushing into decisions that cannot easily be reversed.
+      </p>
+      <p class="drawer-body">
+        Divorce, widowhood, and other major life changes often leave one spouse managing the finances for the first time. We approach these conversations with patience and care — providing clarity without pressure, and a plan that reflects the new reality rather than the old one.
+      </p>
+      <div class="drawer-section">
+        <p class="drawer-section-title">Planning areas we address</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Retirement income planning — withdrawal sequencing, RMD strategy, and sustainable distribution rates</li>
+          <li>· Social Security optimization and pension election analysis</li>
+          <li>· Inherited IRA and beneficiary account strategy under current SECURE Act rules</li>
+          <li>· Estate settlement coordination — navigating the financial complexity of administering an estate</li>
+          <li>· Divorce financial planning — asset division analysis, QDRO review, and post-settlement restructuring</li>
+          <li>· Long-term care planning and healthcare cost modeling</li>
+          <li>· Portfolio restructuring to reflect a new income profile and risk tolerance</li>
+          <li>· Beneficiary review and updated estate documents following a life change</li>
+        </ul>
+      </div>
+      <div class="drawer-callout">
+        <p class="drawer-callout-title">Well-suited for families who...</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Are within 5 years of retirement and have not built a detailed income distribution plan</li>
+          <li>· Have recently inherited assets and are uncertain how to integrate them into an existing plan</li>
+          <li>· Are navigating a major life change and need a trusted advisor to help establish a new financial foundation</li>
+          <li>· Want a relationship where they can ask questions openly — without feeling rushed or sold to</li>
+        </ul>
+      </div>
+      <a href="https://calendly.com/monadnock-capital-group/fit" target="_blank" rel="noopener" class="drawer-cta" onclick="closeDrawer()">Schedule a Conversation</a>
+    </div>
+  </div>
+
+  <!-- DRAWER: New Hampshire Relocators -->
+  <div class="service-drawer" id="drawer-relocators">
+    <div class="drawer-inner">
+      <div class="drawer-close">
+        <button class="drawer-close-btn" onclick="closeDrawer()">Close ✕</button>
+      </div>
+      <p class="drawer-eyebrow">Who We Serve</p>
+      <h2 class="drawer-title">New Hampshire<br><em>Relocators</em></h2>
+      <div class="drawer-rule"></div>
+      <p class="drawer-lead">
+        New Hampshire is one of the most tax-advantaged states in the country. No income tax on wages, no sales tax, and no estate tax. For individuals moving from Massachusetts, Connecticut, New York, or California, the financial implications are significant — but only if the transition is planned correctly.
+      </p>
+      <p class="drawer-body">
+        Establishing domicile in New Hampshire is not simply a matter of updating your driver's license and voter registration. States with income taxes — particularly Massachusetts, which aggressively audits departing high-income residents — scrutinize relocations carefully. The burden of proof is on the taxpayer to demonstrate that New Hampshire is the true primary residence. That means documentation, behavioral changes, and in some cases, a coordinated communication strategy with a tax attorney. We help new clients understand what is required and connect them with the right professionals when the stakes are high.
+      </p>
+      <p class="drawer-body">
+        Beyond the tax residency question, relocating to New Hampshire typically means rebuilding an advisory team from scratch. Your prior financial advisor, CPA, estate attorney, and insurance relationships were likely anchored to where you used to live. We help new residents establish a coordinated local advisory structure — and serve as the financial planning hub around which other relationships are organized.
+      </p>
+      <p class="drawer-body">
+        New Hampshire also has no estate tax, which changes the calculus on certain estate planning structures that may have been established in a higher-tax state. Trusts, gifting programs, and charitable vehicles that made sense in Massachusetts or New York may need to be revisited in light of your new domicile.
+      </p>
+      <div class="drawer-section">
+        <p class="drawer-section-title">Planning areas we address</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Domicile transition planning — what Massachusetts and other states require to recognize the move</li>
+          <li>· Coordination with tax counsel on residency audits and multi-state filing obligations</li>
+          <li>· New Hampshire tax landscape: no income tax, no sales tax, no estate tax — what that means for your plan</li>
+          <li>· Investment income and interest/dividend considerations under NH's prior tax structure</li>
+          <li>· Estate plan review — updating documents to reflect NH domicile and revised exposure</li>
+          <li>· Advisory team rebuild: introductions to local CPAs, estate attorneys, insurance advisors</li>
+          <li>· Real estate and mortgage coordination for the primary residence transition</li>
+          <li>· Retirement income restructuring to take full advantage of the NH tax profile</li>
+        </ul>
+      </div>
+      <div class="drawer-callout">
+        <p class="drawer-callout-title">Well-suited for relocators who...</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Are moving from Massachusetts, Connecticut, New York, or another high-tax state with income above $500K</li>
+          <li>· Have not yet established a trusted financial advisory relationship in New Hampshire</li>
+          <li>· Want to understand what the NH tax advantage actually means for their specific situation — not just in general terms</li>
+          <li>· Are relocating in connection with a business exit, retirement, or other major financial transition</li>
+        </ul>
+      </div>
+      <a href="https://calendly.com/monadnock-capital-group/fit" target="_blank" rel="noopener" class="drawer-cta" onclick="closeDrawer()">Schedule a Conversation</a>
+    </div>
+  </div>
+
   <!-- DRAWER: Mark Gravina -->
   <div class="service-drawer" id="drawer-mark">
     <div class="drawer-inner">
@@ -2424,7 +2626,7 @@
         <span class="credential-tag">Bryant University</span>
       </div>
       <p class="drawer-lead">
-        Mark brings a depth of institutional experience that is uncommon in a boutique practice — built across some of the most respected independent and multi-family office advisory firms in the country.
+        Mark brings a depth of institutional experience that is uncommon in a boutique practice — built across leading independent firms including Focus Partners Wealth and Hightower.
       </p>
       <p class="drawer-body">
         As a CERTIFIED FINANCIAL PLANNER™, Mark's practice centers on comprehensive wealth planning for successful individuals and families navigating complex financial lives. His background spans both large institutional platforms and boutique independent firms, giving him a clear-eyed perspective on what genuinely serves clients well — and what is simply overhead dressed up as service.
@@ -2651,12 +2853,78 @@
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 
+    
     // ============================
+    // INTRO SOUND — synced to shield draw animation
+    // Timeline: shield draws 0.3–2.7s, wordmark 1.6s, completes ~3.0s
+    // ============================
+    function playIntroChime() {
+      if (sessionStorage.getItem('mpw_chime_played')) return;
+      sessionStorage.setItem('mpw_chime_played', '1');
+      try {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (!AudioContext) return;
+        const ctx = new AudioContext();
+        const t = ctx.currentTime;
+
+        function tone(freq, start, dur, type, peak, curve) {
+          const osc = ctx.createOscillator();
+          const env = ctx.createGain();
+          osc.type = type;
+          osc.frequency.setValueAtTime(freq, t + start);
+          env.gain.setValueAtTime(0, t + start);
+          env.gain.linearRampToValueAtTime(peak, t + start + 0.04);
+          if (curve === 'bell') {
+            // Sharp attack, long resonant tail
+            env.gain.setValueAtTime(peak, t + start + 0.04);
+            env.gain.exponentialRampToValueAtTime(peak * 0.3, t + start + 0.4);
+            env.gain.exponentialRampToValueAtTime(0.0001, t + start + dur);
+          } else {
+            // Sustained with gentle fade
+            env.gain.setValueAtTime(peak, t + start + dur * 0.6);
+            env.gain.exponentialRampToValueAtTime(0.0001, t + start + dur);
+          }
+          osc.connect(env);
+          env.connect(ctx.destination);
+          osc.start(t + start);
+          osc.stop(t + start + dur + 0.1);
+        }
+
+        // === PHASE 1: Shield draw begins (0.3s) ===
+        // Crisp high shimmer — glass-like, signals something beginning
+        tone(1318.5, 0.30, 0.9,  'triangle', 0.06, 'bell');   // E6 shimmer
+        tone(880.0,  0.35, 1.1,  'sine',     0.05, 'bell');   // A5 warmth
+
+        // === PHASE 2: Mountains appear (~1.1–1.7s) ===
+        // Mid register bell — body and presence
+        tone(659.25, 1.10, 1.4,  'triangle', 0.08, 'bell');   // E5
+        tone(523.25, 1.20, 1.5,  'sine',     0.06, 'bell');   // C5
+
+        // === PHASE 3: Wordmark resolves (~1.6–2.1s) ===
+        // Warm chord — the "arrival"
+        tone(392.0,  1.60, 2.2,  'sine',     0.07, 'bell');   // G4
+        tone(523.25, 1.65, 2.2,  'triangle', 0.05, 'bell');   // C5
+        tone(659.25, 1.70, 2.2,  'sine',     0.06, 'bell');   // E5
+
+        // === PHASE 4: Final resolution (~2.7s) ===
+        // Deep, authoritative sub-tone — settles as shield completes
+        tone(261.63, 2.70, 1.8,  'sine',     0.07, 'bell');   // C4 foundation
+        tone(392.0,  2.72, 1.8,  'triangle', 0.05, 'bell');   // G4
+        tone(523.25, 2.75, 1.6,  'sine',     0.04, 'bell');   // C5 — final shimmer
+
+      } catch(e) {
+        // Audio not available — silent fallback
+      }
+    }
+// ============================
     // INTRO OVERLAY
     // ============================
     (function() {
       const overlay = document.getElementById('intro-overlay');
       document.body.classList.add('intro-active');
+
+      // Play chime on load — sessionStorage ensures it fires only once per session
+      playIntroChime();
 
       // Total animation duration: ~3.5s, then hold briefly, then exit
       const holdDuration = 3700; // ms before exit begins
@@ -2891,6 +3159,189 @@
     </div>
   </div>
 
+
+  <!-- DRAWER: Business Owners -->
+  <div class="service-drawer" id="drawer-business">
+    <div class="drawer-inner">
+      <div class="drawer-close">
+        <button class="drawer-close-btn" onclick="closeDrawer()">Close ✕</button>
+      </div>
+      <p class="drawer-eyebrow">Who We Serve</p>
+      <h2 class="drawer-title">Business<br><em>Owners</em></h2>
+      <div class="drawer-rule"></div>
+      <p class="drawer-lead">
+        For business owners, the company is not just an asset — it is often the largest, most concentrated, and most emotionally significant piece of the financial picture. That requires a different kind of planning conversation.
+      </p>
+      <p class="drawer-body">
+        Whether you are years away from an exit or actively in the process, the decisions made now have lasting consequences: how the sale is structured, how proceeds are invested, how much goes to taxes versus your family. Most owners spend years building the business and relatively little time planning for what comes after. We help close that gap.
+      </p>
+      <p class="drawer-body">
+        Our work with business owners typically spans three distinct phases. Pre-exit: identifying the right structure, coordinating with M&A advisors and attorneys, modeling after-tax outcomes, and making sure your personal financial plan can absorb the transition. At exit: managing the liquidity event itself, coordinating the tax strategy, and establishing the investment framework for the proceeds. Post-exit: rebuilding a portfolio that reflects your new financial reality — without the concentrated risk of the business, but with a structure that preserves what you built.
+      </p>
+      <div class="drawer-section">
+        <p class="drawer-section-title">Planning areas we address</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Pre-exit financial modeling — what does life look like after the transaction?</li>
+          <li>· Business valuation coordination and sale structure analysis (asset vs. stock sale implications)</li>
+          <li>· Installment sales, earnouts, and rolling equity — managing multi-year tax exposure</li>
+          <li>· Qualified Opportunity Zone investing for capital gains deferral</li>
+          <li>· Charitable strategies: Donor-Advised Funds, CRTs, and QCDs to offset taxable events</li>
+          <li>· Estate planning around business interests — gifting strategies before the sale</li>
+          <li>· Key man insurance, buy-sell agreements, and succession structure review</li>
+          <li>· Post-liquidity portfolio construction and income strategy</li>
+        </ul>
+      </div>
+      <div class="drawer-callout">
+        <p class="drawer-callout-title">Well-suited for business owners who...</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Have a business valued at $3M or above and are considering a sale or transition in the next 1–7 years</li>
+          <li>· Have most of their net worth tied up in the business and limited liquid assets relative to total wealth</li>
+          <li>· Want a financial advisor who can work alongside their M&A advisor, CPA, and attorney — not operate in isolation</li>
+          <li>· Are thinking about what the next chapter looks like, not just how to close the deal</li>
+        </ul>
+      </div>
+      <a href="https://calendly.com/monadnock-capital-group/fit" target="_blank" rel="noopener" class="drawer-cta" onclick="closeDrawer()">Schedule a Conversation</a>
+    </div>
+  </div>
+
+  <!-- DRAWER: Senior Executives -->
+  <div class="service-drawer" id="drawer-executives">
+    <div class="drawer-inner">
+      <div class="drawer-close">
+        <button class="drawer-close-btn" onclick="closeDrawer()">Close ✕</button>
+      </div>
+      <p class="drawer-eyebrow">Who We Serve</p>
+      <h2 class="drawer-title">Senior<br><em>Executives</em></h2>
+      <div class="drawer-rule"></div>
+      <p class="drawer-lead">
+        Senior executives face a wealth management challenge that is fundamentally different from what most advisors are built to handle: income and assets that arrive in multiple forms, on irregular schedules, with significant tax consequences attached to each decision.
+      </p>
+      <p class="drawer-body">
+        Base salary is the straightforward part. The complexity lies in everything else — RSUs vesting across multiple tranches, NQSOs and ISOs with overlapping exercise windows, deferred compensation plans with payout elections that have already been locked in, and concentrated positions in employer stock that represent both the foundation of your wealth and its biggest single risk. Each of these requires a coordinated strategy. Handled in isolation, they add up to unnecessary tax liability and poorly diversified exposure.
+      </p>
+      <p class="drawer-body">
+        The transition from executive income to investment income — retirement or a career change — is where the planning stakes are highest. The decisions made in the 24–36 months on either side of that transition typically have more impact on long-term financial outcomes than any other period. We work with executives to build a plan that accounts for what is coming, not just what is here today.
+      </p>
+      <div class="drawer-section">
+        <p class="drawer-section-title">Planning areas we address</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Equity compensation strategy — RSU vesting schedules, ISO/NQSO exercise planning, and AMT exposure</li>
+          <li>· Concentrated stock position management: staged diversification, exchange funds, and covered call strategies</li>
+          <li>· Deferred compensation plan coordination — payout election review and distribution timing</li>
+          <li>· 10b5-1 plan strategy for orderly stock sales within trading windows</li>
+          <li>· Retirement transition modeling — income replacement, Social Security optimization, Medicare planning</li>
+          <li>· Executive benefit review: SERP, COLI, supplemental life, and non-qualified plans</li>
+          <li>· Asset location across taxable, tax-deferred, and Roth accounts</li>
+          <li>· Estate planning for accumulated wealth: trusts, gifting strategies, beneficiary coordination</li>
+        </ul>
+      </div>
+      <div class="drawer-callout">
+        <p class="drawer-callout-title">Well-suited for executives who...</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Receive a meaningful portion of compensation in equity — and lack a clear strategy for managing it</li>
+          <li>· Have significant exposure to a single employer's stock and want to reduce that risk systematically</li>
+          <li>· Are within 5 years of a major career transition and have not stress-tested their plan</li>
+          <li>· Work with a corporate CPA who handles tax compliance but want a financial advisor focused on strategy</li>
+        </ul>
+      </div>
+      <a href="https://calendly.com/monadnock-capital-group/fit" target="_blank" rel="noopener" class="drawer-cta" onclick="closeDrawer()">Schedule a Conversation</a>
+    </div>
+  </div>
+
+  <!-- DRAWER: Families in Transition -->
+  <div class="service-drawer" id="drawer-families">
+    <div class="drawer-inner">
+      <div class="drawer-close">
+        <button class="drawer-close-btn" onclick="closeDrawer()">Close ✕</button>
+      </div>
+      <p class="drawer-eyebrow">Who We Serve</p>
+      <h2 class="drawer-title">Families in<br><em>Transition</em></h2>
+      <div class="drawer-rule"></div>
+      <p class="drawer-lead">
+        Some of the most consequential financial decisions happen not during periods of stability, but during transition — retirement, inheritance, divorce, the death of a spouse, or a significant change in household income. These moments require clear thinking precisely when clarity is hardest to find.
+      </p>
+      <p class="drawer-body">
+        Approaching retirement is the most common inflection point we see. The accumulation phase — saving, investing, deferring — is governed by a relatively simple framework. The distribution phase is far more complex: sequencing withdrawals across account types, managing taxes on Social Security and RMDs, deciding when to take pension elections, and structuring a sustainable income stream that does not outlive the people it supports. Getting this right in the first few years of retirement matters more than most people expect.
+      </p>
+      <p class="drawer-body">
+        Inheritance and estate settlement present their own set of challenges. Suddenly inheriting significant assets — particularly if they arrive as a mix of IRAs, taxable accounts, real estate, and business interests — requires immediate decisions with long-term implications. We help families navigate these moments without rushing into decisions that cannot easily be reversed.
+      </p>
+      <p class="drawer-body">
+        Divorce, widowhood, and other major life changes often leave one spouse managing the finances for the first time. We approach these conversations with patience and care — providing clarity without pressure, and a plan that reflects the new reality rather than the old one.
+      </p>
+      <div class="drawer-section">
+        <p class="drawer-section-title">Planning areas we address</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Retirement income planning — withdrawal sequencing, RMD strategy, and sustainable distribution rates</li>
+          <li>· Social Security optimization and pension election analysis</li>
+          <li>· Inherited IRA and beneficiary account strategy under current SECURE Act rules</li>
+          <li>· Estate settlement coordination — navigating the financial complexity of administering an estate</li>
+          <li>· Divorce financial planning — asset division analysis, QDRO review, and post-settlement restructuring</li>
+          <li>· Long-term care planning and healthcare cost modeling</li>
+          <li>· Portfolio restructuring to reflect a new income profile and risk tolerance</li>
+          <li>· Beneficiary review and updated estate documents following a life change</li>
+        </ul>
+      </div>
+      <div class="drawer-callout">
+        <p class="drawer-callout-title">Well-suited for families who...</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Are within 5 years of retirement and have not built a detailed income distribution plan</li>
+          <li>· Have recently inherited assets and are uncertain how to integrate them into an existing plan</li>
+          <li>· Are navigating a major life change and need a trusted advisor to help establish a new financial foundation</li>
+          <li>· Want a relationship where they can ask questions openly — without feeling rushed or sold to</li>
+        </ul>
+      </div>
+      <a href="https://calendly.com/monadnock-capital-group/fit" target="_blank" rel="noopener" class="drawer-cta" onclick="closeDrawer()">Schedule a Conversation</a>
+    </div>
+  </div>
+
+  <!-- DRAWER: New Hampshire Relocators -->
+  <div class="service-drawer" id="drawer-relocators">
+    <div class="drawer-inner">
+      <div class="drawer-close">
+        <button class="drawer-close-btn" onclick="closeDrawer()">Close ✕</button>
+      </div>
+      <p class="drawer-eyebrow">Who We Serve</p>
+      <h2 class="drawer-title">New Hampshire<br><em>Relocators</em></h2>
+      <div class="drawer-rule"></div>
+      <p class="drawer-lead">
+        New Hampshire is one of the most tax-advantaged states in the country. No income tax on wages, no sales tax, and no estate tax. For individuals moving from Massachusetts, Connecticut, New York, or California, the financial implications are significant — but only if the transition is planned correctly.
+      </p>
+      <p class="drawer-body">
+        Establishing domicile in New Hampshire is not simply a matter of updating your driver's license and voter registration. States with income taxes — particularly Massachusetts, which aggressively audits departing high-income residents — scrutinize relocations carefully. The burden of proof is on the taxpayer to demonstrate that New Hampshire is the true primary residence. That means documentation, behavioral changes, and in some cases, a coordinated communication strategy with a tax attorney. We help new clients understand what is required and connect them with the right professionals when the stakes are high.
+      </p>
+      <p class="drawer-body">
+        Beyond the tax residency question, relocating to New Hampshire typically means rebuilding an advisory team from scratch. Your prior financial advisor, CPA, estate attorney, and insurance relationships were likely anchored to where you used to live. We help new residents establish a coordinated local advisory structure — and serve as the financial planning hub around which other relationships are organized.
+      </p>
+      <p class="drawer-body">
+        New Hampshire also has no estate tax, which changes the calculus on certain estate planning structures that may have been established in a higher-tax state. Trusts, gifting programs, and charitable vehicles that made sense in Massachusetts or New York may need to be revisited in light of your new domicile.
+      </p>
+      <div class="drawer-section">
+        <p class="drawer-section-title">Planning areas we address</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Domicile transition planning — what Massachusetts and other states require to recognize the move</li>
+          <li>· Coordination with tax counsel on residency audits and multi-state filing obligations</li>
+          <li>· New Hampshire tax landscape: no income tax, no sales tax, no estate tax — what that means for your plan</li>
+          <li>· Investment income and interest/dividend considerations under NH's prior tax structure</li>
+          <li>· Estate plan review — updating documents to reflect NH domicile and revised exposure</li>
+          <li>· Advisory team rebuild: introductions to local CPAs, estate attorneys, insurance advisors</li>
+          <li>· Real estate and mortgage coordination for the primary residence transition</li>
+          <li>· Retirement income restructuring to take full advantage of the NH tax profile</li>
+        </ul>
+      </div>
+      <div class="drawer-callout">
+        <p class="drawer-callout-title">Well-suited for relocators who...</p>
+        <ul class="drawer-callout-body" style="list-style:none; padding:0;">
+          <li>· Are moving from Massachusetts, Connecticut, New York, or another high-tax state with income above $500K</li>
+          <li>· Have not yet established a trusted financial advisory relationship in New Hampshire</li>
+          <li>· Want to understand what the NH tax advantage actually means for their specific situation — not just in general terms</li>
+          <li>· Are relocating in connection with a business exit, retirement, or other major financial transition</li>
+        </ul>
+      </div>
+      <a href="https://calendly.com/monadnock-capital-group/fit" target="_blank" rel="noopener" class="drawer-cta" onclick="closeDrawer()">Schedule a Conversation</a>
+    </div>
+  </div>
+
   <!-- DRAWER: Mark Gravina -->
   <div class="service-drawer" id="drawer-mark">
     <div class="drawer-inner">
@@ -2906,7 +3357,7 @@
         <span class="credential-tag">Bryant University</span>
       </div>
       <p class="drawer-lead">
-        Mark brings a depth of institutional experience that is uncommon in a boutique practice — built across some of the most respected independent and multi-family office advisory firms in the country.
+        Mark brings a depth of institutional experience that is uncommon in a boutique practice — built across leading independent firms including Focus Partners Wealth and Hightower.
       </p>
       <p class="drawer-body">
         As a CERTIFIED FINANCIAL PLANNER™, Mark's practice centers on comprehensive wealth planning for successful individuals and families navigating complex financial lives. His background spans both large institutional platforms and boutique independent firms, giving him a clear-eyed perspective on what genuinely serves clients well — and what is simply overhead dressed up as service.
