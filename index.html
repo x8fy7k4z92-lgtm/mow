@@ -374,6 +374,7 @@
        PHILOSOPHY
     ============================================== */
     #philosophy {
+      scroll-margin-top: 80px;
       background: var(--off-white);
       padding: var(--section-v) 0;
     }
@@ -457,6 +458,7 @@
        SERVICES
     ============================================== */
     #services {
+      scroll-margin-top: 80px;
       background: var(--navy);
       padding: var(--section-v) 0;
     }
@@ -556,6 +558,7 @@
        WHO WE SERVE
     ============================================== */
     #clients {
+      scroll-margin-top: 80px;
       background: var(--cream);
       padding: var(--section-v) 0;
     }
@@ -630,6 +633,7 @@
        THE FIRM / TEAM
     ============================================== */
     #firm {
+      scroll-margin-top: 80px;
       background: var(--navy);
       padding: 0;
       position: relative;
@@ -690,8 +694,8 @@
       inset: 0;
       background: linear-gradient(
         to right,
-        transparent 50%,
-        rgba(19,32,53,0.55) 80%,
+        transparent 72%,
+        rgba(19,32,53,0.7) 92%,
         var(--navy) 100%
       );
       z-index: 1;
@@ -780,6 +784,7 @@
        CONTACT
     ============================================== */
     #contact {
+      scroll-margin-top: 80px;
       background: var(--navy-deep);
       padding: var(--section-v) 0;
     }
@@ -1391,6 +1396,7 @@
        SUCCESSION SECTION
     ============================================== */
     #succession {
+      scroll-margin-top: 80px;
       background: var(--cream);
       padding: var(--section-v) 0;
       position: relative;
@@ -1475,17 +1481,15 @@
       filter: grayscale(10%) brightness(0.93);
     }
 
-    /* Right-edge fade into card panels */
+    /* No side fade — both Mark and Ryan should be fully visible */
     .succession-photo-wrap::after {
       content: '';
       position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to right,
-        transparent 55%,
-        rgba(237,232,223,0.6) 85%,
-        var(--cream-dark) 100%
-      );
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: linear-gradient(transparent, rgba(12,24,36,0.35));
       z-index: 1;
     }
 
@@ -1677,7 +1681,8 @@
         min-height: 380px;
       }
       .succession-photo-wrap::after {
-        background: linear-gradient(to bottom, transparent 60%, var(--cream-dark) 100%);
+        height: 60px;
+        background: linear-gradient(transparent, rgba(12,24,36,0.3));
       }
     }
 
@@ -1703,6 +1708,7 @@
        FIRM PRINCIPAL (CARL) SECTION
     ============================================== */
     #principal {
+      scroll-margin-top: 80px;
       background: var(--navy-deep);
       padding: var(--section-v) 0;
       position: relative;
@@ -2382,7 +2388,7 @@
           <p class="person-card-title">CFP® · Wealth Manager</p>
           <div class="person-card-rule"></div>
           <p class="person-card-excerpt">
-            A CFP® with experience across some of the most respected independent advisory firms in the country — including The Colony Group, Hightower, and One Charles Private Wealth — Mark brings institutional-grade rigor to a boutique practice.
+            Having served clients across Colony Group, Hightower, and other leading independent platforms, Mark brings institutional-grade rigor to a boutique practice.
           </p>
           <span class="person-card-cta">Full Profile</span>
         </div>
@@ -2436,10 +2442,6 @@
         <div class="drawer-career-item">
           <span class="career-firm">The Colony Group</span>
           <span class="career-role">Associate Wealth Advisor — Boston, MA</span>
-        </div>
-        <div class="drawer-career-item">
-          <span class="career-firm">One Charles Private Wealth</span>
-          <span class="career-role">Financial Advisor</span>
         </div>
         <div class="drawer-career-item">
           <span class="career-firm">Hightower</span>
@@ -2916,7 +2918,6 @@
         <p class="drawer-section-title">Professional Background</p>
         <div class="drawer-career-item"><span class="career-firm">Steward Partners</span><span class="career-role">Wealth Manager, Monadnock Private Wealth</span></div>
         <div class="drawer-career-item"><span class="career-firm">The Colony Group</span><span class="career-role">Associate Wealth Advisor — Boston, MA</span></div>
-        <div class="drawer-career-item"><span class="career-firm">One Charles Private Wealth</span><span class="career-role">Financial Advisor</span></div>
         <div class="drawer-career-item"><span class="career-firm">Hightower</span><span class="career-role">Advisory Services</span></div>
         <div class="drawer-career-item"><span class="career-firm">Argent Wealth Management</span><span class="career-role">Financial Advisor</span></div>
         <div class="drawer-career-item"><span class="career-firm">Wells Fargo Advisors</span><span class="career-role">Financial Advisor</span></div>
